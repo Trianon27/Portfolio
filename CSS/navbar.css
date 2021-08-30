@@ -343,5 +343,31 @@ nav ul li.yellow:hover {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 420px){
+  .navContainer img{
+    width: 80%;
+    max-width: 200px;
+    margin: 4% 15% 0 0;
+    float: right;
+  }
+
+}
+
+@media screen and (max-width: 350px){
+  .navContainer img{
+    max-width: 175px;
+    margin: 5% 10% 0 0;
+  }
+
+}
+
+@media screen and (max-width: 300px){
+  .navContainer img{
+    max-width: 130px;
+    margin: 8% 10% 0 0;
+  }
+
+}
+
 
 /*# sourceMappingURL=style.css.map */

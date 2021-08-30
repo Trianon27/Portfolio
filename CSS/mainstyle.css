@@ -16,6 +16,7 @@ body{
     align-items: center;
     scrollbar-color: #d4aa70 #e4e4e4;
     scrollbar-width: thin;
+    box-sizing: border-box;
 }
 
 body::-webkit-scrollbar{
@@ -37,6 +38,9 @@ body::-webkit-scrollbar-thumb{
 h1{
     padding: 2%;
     margin: 2%;
+    padding-bottom: 0;
+    margin-bottom: 1%;
+    
 }
 
 
@@ -49,6 +53,7 @@ hr {
 hr:after {  /* Not really supposed to work, but does */
     content: "\00a0";  /* Prevent margin collapse */
 }
+
 
 /*
 ul, p{
@@ -67,12 +72,15 @@ ul, p{
        -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    box-sizing: border-box;
 }
 
+
+/*
 .presentationPage aside{
-    position: absolute;
+    display: inline-block;
+    position: relative;
     bottom: 10px;
-    position: absolute;
     bottom: .5%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -80,7 +88,7 @@ ul, p{
 
 .presentationPage i{
     font-size: 1.5em;
-}
+}*/
 
 
 .aboutMePage{
@@ -89,6 +97,7 @@ ul, p{
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(10px, auto);
+    box-sizing: border-box;
 }
 
 .aboutMePage .photoAboutMe{
@@ -115,6 +124,7 @@ ul, p{
     grid-row: 2;
     padding: 2%;
     margin: 2%;
+    margin-bottom: 20%;
 }
 
 .aboutMeBlock h1{
@@ -135,6 +145,7 @@ ul, p{
 
 .educationPage{
     height: auto;
+    box-sizing: border-box;
 }
 
 .educationPage h1{
@@ -171,9 +182,7 @@ ul, p{
 .card{
     width:90%;
 	margin: 2.5% 2.5% 5% 5%;
-	display: block;
-    border-radius: 20px;
-    
+	display: block;    
 }
 
 
@@ -185,20 +194,34 @@ ul, p{
     padding: 2%;
 }
 
+.university .card{
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgb(0, 164, 49);
+}
+
 .university .card h3{
-    background-color: rgb(78, 168, 60);
+    background-color: rgba(78, 168, 60, 0.281);
+    border-radius: 20px 20px 0px 0px;
 }
 .university .card div{
-    background-color: rgb(151, 192, 153);
-    color: #000;
+    background-color: rgba(151, 192, 153, 0.479);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+}
+
+.coursera .card{
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgb(0, 162, 255);
 }
 
 .coursera .card h3{
-    background-color: #0B5DD4;
+    background-color: #0b5bd43b;
+    border-radius: 20px 20px 0px 0px;
 }
 .coursera .card div{
-    background-color: rgb(116, 152, 250);
-    color: #000;
+    background-color: rgba(116, 152, 250, 0.452);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
 }
 
 
@@ -209,19 +232,19 @@ ul, p{
         min-height: 100vh;
         height: auto;
         padding: 2%;
+        font-size: 1rem;
+        box-sizing: border-box;
 }
 
-.experiencePage h1{
-    margin-bottom: 10px;
-}
 
 .cardContainer{
-    background-color: #fff;
-    color: #000;
-    border: 3px solid #000;
+    background-color: rgb(83, 3, 83) ;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px 5px rgba(204, 0, 204, 0.466);
     border-radius: 30px;
-    padding: 1%;
-    margin: 1%;
+    padding: 2%;
+    margin: 1% 1% 3% 1%;
     width: 100%;
     height: 100px;
 	display: grid;
@@ -229,10 +252,9 @@ ul, p{
     grid-gap: 10px;
     grid-auto-rows: minmax(10px, auto);
     font-size: 1em;
-    opacity: .5;
     overflow: hidden;
     transition-property: all;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
 }
 
 .cardContainer h2{
@@ -242,11 +264,13 @@ ul, p{
     width: 150%;
     grid-column: 1;
     grid-row: 1;
-    margin-left: 1%;
+    margin: 3%;
+    font-size: 1.3rem;
 }
 
 .cardContainer .skillContainer{
     display: none;
+    color: #000;
     transition: 2s;
     font-size: 1.1rem;
     grid-column: 2/4;
@@ -256,7 +280,7 @@ ul, p{
 
 .cardContainer i{
     display: none;
-    font-size: 8em;
+    font-size: 8rem;
     margin-top: 20px;  
     grid-column: 4;  
     margin-left: 20px;
@@ -268,8 +292,11 @@ ul, p{
 .cardContainer:hover{
     opacity: 1;
     transition-property: all;
-    transition:2s;
+    transition: 1.5s;
     height: 200px;
+    background-color: #fff;
+    color: #000;
+    border-color: #000;    
 }
 
 .cardContainer:hover h2{
@@ -278,7 +305,7 @@ ul, p{
     transition-duration: 2s;
     -moz-transform: rotate(-90deg);
     left: 20%;  
-    margin-bottom: 60%;
+    margin-bottom: 85%;
     padding-top: 10px;
     grid-row: 1;
     justify-content: center;
@@ -318,6 +345,7 @@ footer{
     align-items:center;
     text-align: center;
     font-size: 1.25rem;
+    box-sizing: border-box;
     /*
     display: inline-block;
     margin: 0 auto;
@@ -346,14 +374,14 @@ footer i{
             grid-gap: 10px;
         }
     
-        
+        /*
         #course, #nacional{
             grid-row: 1;
         }
     
         .educationPage #course{
             width: 15rem;
-        }
+        }*/
 
     /*ABOUT ME PAGE*/
 
@@ -379,13 +407,21 @@ footer i{
 
     .experiencePage{
         min-height: auto;
+        box-sizing: border-box;
+
     }
 
     .experienceContainer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
+        grid-gap: 20px;
         grid-auto-rows: minmax(10px, auto);
+        box-sizing: border-box;
+    }
+
+    .cardContainer{
+        margin: 0% 2%;
+        box-sizing: border-box;
     }
 
     .experienceContainer:nth-child(even){
@@ -480,5 +516,154 @@ footer i{
         font-size: 4rem;
     }
 
+}
+
+/* CHANGING SOME FONTS-SIZE*/
+
+@media screen and (max-width: 550px){
+
+    /*EXPERIENCE PAGE*/
+
+    .cardContainer{
+        overflow-y: scroll;
+    }
+    .cardContainer i{
+        font-size: 6rem;
+    }
+
+    .cardContainer h2{
+        width: 200%;
+        font-size: 1.3rem;
+    }
+
+    .cardContainer .skillContainer{
+        margin-left: 10%;
+        font-size: .8rem;
+    }
+
+}
+
+
+@media screen and (max-width: 480px){
+
+    /*EDUCATION PAGE*/
+    .educationPage  #nacional{
+        width: 24rem;
+        margin-left: 20px;
+    }
+    .educationPage #course{
+        width: 15rem;
+    }
+
+    /*EXPERIENCE PAGE*/
+
+    .cardContainer i{
+        font-size: 4rem;
+        margin: 60px 2px 0 0;
+        
+    }
+
+    .cardContainer .skillContainer{
+        font-size: .85rem;
+        margin-left: 5%;
+    }
+
+    .cardContainer h2{
+        font-size: 1.2rem;
+    }
+
+
+}
+
+
+@media screen and (max-width: 400px){
+    /*EDUCATION PAGE*/
+    .educationPage  #nacional{
+        width: 20rem;
+    }
+
+    .educationPage #course{
+        width: 12.5rem;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+    /*ABOUT ME PAGE */
+    .aboutMePage .photoAboutMe img{
+        width: 150px;
+    }
+
+    /*EDUCATION PAGE*/
+    .educationPage  #nacional{
+        width: 15rem;
+        margin: 0;
+        margin: 20px 0px 20px 30px;
+    }
+
+
+    .educationPage #course{
+        width: 12.5rem;
+    }
+
+
+    /*EXPERIENCE PAGE*/
+
+
+    .cardContainer i{
+        font-size: 3rem;
+        margin: 70px 2px 0 0;
+        
+    }
+
+    .cardContainer .skillContainer{
+        font-size: .7rem;
+        margin-left: 0;
+    }
+
+    .cardContainer h2{
+        width: 200%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+    /*EDUCATION PAGE*/
+    .educationPage  #nacional{
+        width: 14rem;
+    }
+
+    .educationPage #course{
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 270px){
+    /*EDUCATION PAGE*/
+    .educationPage  #nacional{
+        width: 7.5rem;
+    }
+
+    .educationPage #course{
+        width: 5rem;
+    }
+
+    /*EXPERIENCE PAGE*/
+       .cardContainer:hover i{
+        display: none;   
+    }
+
+    .cardContainer .skillContainer{
+        grid-row: 2;
+        font-size: .9rem;
+    }
+
+    .cardContainer:hover h2{
+        transform: none;
+        margin: 5%;
+        font-size: 1.2rem;
+    }
+
+    
 }
 

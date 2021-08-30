@@ -585,3 +585,73 @@
     }
   
   }
+
+  @media screen and (max-width: 300px){
+    .presentationPage h1:nth-child(1), .presentationPage h1:nth-child(2) {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) and (min-height: 1200px){
+    .presentationPage h1:nth-child(1), .presentationPage h1:nth-child(2) {
+      font-size: 6rem;
+    }
+  }
+
+  @media screen and (max-height: 550px){
+    .presentationPage h1:nth-child(1) {
+      font-size: 2.5rem;
+      margin-bottom: 10%;
+    }
+    .presentationPage h1:nth-child(2){
+      font-size: 2.5rem;
+      margin-bottom: 20%;
+    }
+  }
+
+
+  @media screen and (max-height: 450px){
+    .presentationPage h1:nth-child(1) {
+      font-size: 2.25rem;
+      margin-bottom: 10%;
+    }
+    .presentationPage h1:nth-child(2){
+      font-size: 2.25rem;
+      margin-bottom: 20%;
+    }
+  }
+
+  @media screen and (max-height: 350px){
+    .presentationPage h1:nth-child(1) {
+      font-size: 2rem;
+      margin-bottom: 10%;
+    }
+    .presentationPage h1:nth-child(2){
+      font-size: 2rem;
+      margin-bottom: 20%;
+    }
+  }
+
+  @media screen and (max-height: 300px){
+    .presentationPage h1:nth-child(1) {
+      font-size: 1.5rem;
+      margin-bottom: 10%;
+    }
+    .presentationPage h1:nth-child(2){
+      font-size: 1.5rem;
+      margin-bottom: 20%;
+    }
+  }
+
+  @media screen and (max-height: 200px){
+    .presentationPage h1:nth-child(1) {
+      font-size: 1rem;
+    }
+    .presentationPage h1:nth-child(2){
+      font-size: 1rem;
+    }
+  }
+
+
+
+
